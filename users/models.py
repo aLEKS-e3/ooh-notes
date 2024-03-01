@@ -1,3 +1,12 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
+from note.models import TechTag
 
-# Create your models here.
+
+class TechUser(AbstractUser):
+    skill = models.ForeignKey(
+        TechTag, on_delete=models.DO_NOTHING, related_name="tech_users"
+    )
+
+    def __str__(self):
+        return self.username
