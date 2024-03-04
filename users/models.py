@@ -5,7 +5,9 @@ from note.models import TechTag
 
 class TechUser(AbstractUser):
     skill = models.ForeignKey(
-        TechTag, on_delete=models.DO_NOTHING, related_name="tech_users"
+        to=TechTag,
+        on_delete=models.DO_NOTHING,
+        related_name="tech_users",
     )
 
     def __str__(self):
