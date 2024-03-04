@@ -18,3 +18,30 @@ class NoteGroupForm(forms.ModelForm):
     class Meta:
         model = NoteGroup
         fields = "__all__"
+
+
+class NoteSearchForm(forms.Form):
+    title = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Search by title"})
+    )
+
+
+class NoteGroupSearchForm(forms.Form):
+    name = forms.CharField(
+        max_length=255,
+        required=False,
+        label="",
+        widget=forms.TextInput(attrs={"placeholder": "Search by name"})
+    )
+
+
+class TechTagFilterForm(forms.Form):
+    tag = forms.ModelMultipleChoiceField(
+        queryset=TechTag.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        label="",
+        required=False
+    )

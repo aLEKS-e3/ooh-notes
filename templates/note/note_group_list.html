@@ -9,11 +9,17 @@
     </a>
   </h1>
 
-  {#    <form action="" method="get" class="form-inline">#}
-  {#      {{ search_form|crispy }}#}
-  {#      <input class="btn btn-secondary" type="submit" value="🔍">#}
-  {#    </form>#}
-  {#    <br>#}
+  <form action="" method="get" class="form-inline">
+    {{ search_form|crispy }}
+    <input class="btn btn-secondary" type="submit" value="🔍">
+  </form>
+  <br>
+
+  <form action="" method="get">
+    {{ filter_form|crispy }}
+    <input class="btn btn-secondary" type="submit" value="Apply filter">
+  </form>
+  <br>
 
   {% if note_group_list %}
     <ul>
