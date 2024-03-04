@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "note",
     "users",
+    "crispy_forms",
+    "crispy_bootstrap4",
+
 ]
 
 MIDDLEWARE = [
@@ -71,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ooh_notes.wsgi.application'
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -119,6 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (BASE_DIR / "static",)
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
