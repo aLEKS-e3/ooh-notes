@@ -8,7 +8,8 @@
       </form>
     </li>
   {% else %}
-    <li class="btn btn-primary"><a style="color: white;" href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+    <li class="btn btn-primary"><a style="color: white;" href="{% url 'login'%}?next={{request.path}}">Log In</a></li>
+    <li class="btn btn-primary"><a style="color: white;" href="{% url 'users:sign-up'%}">Sign Up</a></li>
   {% endif %}
 
   <br>

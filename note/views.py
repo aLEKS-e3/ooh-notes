@@ -10,7 +10,9 @@ from note.models import Note, NoteGroup
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    return render(request, "note/index.html")
+    if request.user.is_authenticated:
+        return render(request, "note/index.html")
+    return render(request, "note/landing.html")
 
 
 class NoteListView(LoginRequiredMixin, generic.ListView):

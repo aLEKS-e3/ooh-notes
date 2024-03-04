@@ -8,4 +8,7 @@
     {{ form|crispy }}
     <button>Register</button>
   </form>
+  <br>
+  <p>Already have an account? <a href="{% url 'login' %}">Log in here!</a></p>
+
 {% endblock %}

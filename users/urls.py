@@ -5,3 +5,5 @@ from users.views import registration
 urlpatterns = [
     path("register/", registration, name="sign-up"),
 ]
+
+app_name = "users"
