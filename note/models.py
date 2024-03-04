@@ -12,7 +12,7 @@ class TechTag(models.Model):
 class Note(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    resource = models.CharField(max_length=255)
+    resources = models.CharField(max_length=255, null=True, blank=True)
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1>
+    Your Notes
+    <a href="{% url 'note:note-create' %}" class="btn btn-primary link-to-page">
+      +
+    </a>
+  </h1>
+
+  {#    <form action="" method="get" class="form-inline">#}
+  {#      {{ search_form|crispy }}#}
+  {#      <input class="btn btn-secondary" type="submit" value="🔍">#}
+  {#    </form>#}
+  {#    <br>#}
+
+  {% if note_list %}
+    <ul>
+      {% for note in note_list %}
+        <li>
+          <a href="{% url "note:note-detail" pk=note.id %}">{{ note.id }}</a>
+          {{ note.title }} ({{ note.owner.username }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no notes...</p>
+  {% endif %}
+{% endblock %}

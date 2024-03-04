@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>ooh! Your Notes</h1>
+  <p>Keep everything at hand!</p>
+  <h2>Navigation</h2>
+  <p>Options:</p>
+  <ul>
+    <li><a href="{% url "note:note-list" %}">All notes!</a></li>
+    {#        <li>{% url "" %}</li>#}
+    {#        <li>{% url "" %}</li>#}
+  </ul>
+{% endblock %}
