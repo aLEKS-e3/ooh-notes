@@ -39,9 +39,9 @@ class NoteGroupSearchForm(forms.Form):
 
 
 class TechTagFilterForm(forms.Form):
-    tag = forms.ModelMultipleChoiceField(
+    tag = forms.ModelChoiceField(
         queryset=TechTag.objects.all(),
-        widget=forms.CheckboxSelectMultiple,
+        widget=forms.RadioSelect,
         label="",
         required=False
     )

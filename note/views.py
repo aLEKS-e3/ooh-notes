@@ -32,7 +32,7 @@ class NoteListView(LoginRequiredMixin, generic.ListView):
         if tag.is_valid():
             if tag.cleaned_data["tag"]:
                 queryset = queryset.filter(
-                    tags__id__in=tag.cleaned_data["tag"]
+                    tags=tag.cleaned_data["tag"]
                 )
 
         return queryset
@@ -85,7 +85,7 @@ class NoteGroupListView(LoginRequiredMixin, generic.ListView):
         if tag.is_valid():
             if tag.cleaned_data["tag"]:
                 queryset = queryset.filter(
-                    tag__in=tag.cleaned_data["tag"]
+                    tag__name=tag.cleaned_data["tag"]
                 )
 
         if form.is_valid():

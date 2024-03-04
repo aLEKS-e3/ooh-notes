@@ -17,7 +17,10 @@
 
   <form action="" method="get">
     {{ filter_form|crispy }}
-    <input class="btn btn-secondary" type="submit" value="Apply filter">
+    <input class="btn btn-primary" type="submit" value="Apply filter">
+    <a href="{% url 'note:note-group-list' %}" class="btn btn-secondary link-to-page">
+      x
+    </a>
   </form>
   <br>
 
