@@ -1,9 +1,9 @@
 from django import forms
 
-from note.models import Note, TechTag
+from note.models import Note, TechTag, NoteGroup
 
 
-class NoteCreationForm(forms.ModelForm):
+class NoteForm(forms.ModelForm):
     tags = forms.ModelMultipleChoiceField(
         queryset=TechTag.objects.all(),
         widget=forms.CheckboxSelectMultiple,
@@ -11,4 +11,10 @@ class NoteCreationForm(forms.ModelForm):
 
     class Meta:
         model = Note
+        fields = "__all__"
+
+
+class NoteGroupForm(forms.ModelForm):
+    class Meta:
+        model = NoteGroup
         fields = "__all__"

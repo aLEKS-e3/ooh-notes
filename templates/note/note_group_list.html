@@ -3,8 +3,8 @@
 
 {% block content %}
   <h1>
-    My Notes
-    <a href="{% url 'note:note-create' %}" class="btn btn-primary link-to-page">
+    My Note Groups
+    <a href="{% url 'note:note-group-create' %}" class="btn btn-primary link-to-page">
       +
     </a>
   </h1>
@@ -15,16 +15,16 @@
   {#    </form>#}
   {#    <br>#}
 
-  {% if note_list %}
+  {% if note_group_list %}
     <ul>
-      {% for note in note_list %}
+      {% for group in note_group_list %}
         <li>
-          <a href="{% url "note:note-detail" pk=note.id %}">{{ note.id }}</a>
-          {{ note.title }} ({{ note.owner.username }})
+          <a href="{% url "note:note-group-detail" pk=group.id %}">{{ group.id }}</a>
+          {{ group.name }} ({{ group.owner.username }})
         </li>
       {% endfor %}
     </ul>
   {% else %}
-    <p>There are no notes...</p>
+    <p>There are no groups...</p>
   {% endif %}
 {% endblock %}

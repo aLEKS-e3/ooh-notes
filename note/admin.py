@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from note.models import TechTag, Note
+from note.models import TechTag, Note, NoteGroup
 from users.models import TechUser
 
 admin.site.register(TechTag)
@@ -36,3 +36,10 @@ class NoteAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     list_filter = ("owner",)
     list_display = ("title", "owner",)
+
+
+@admin.register(NoteGroup)
+class NoteGroupAdmin(admin.ModelAdmin):
+    search_fields = ("name",)
+    list_filter = ("tag",)
+    list_display = ("name", "owner", "tag",)

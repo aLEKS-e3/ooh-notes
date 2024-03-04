@@ -21,6 +21,32 @@ urlpatterns = [
         name="note-delete"
     ),
     path("notes/create/", views.NoteCreateView.as_view(), name="note-create"),
+    path(
+        "note-groups/",
+        views.NoteGroupListView.as_view(),
+        name="note-group-list"
+    ),
+    path(
+        "note-groups/<int:pk>/",
+        views.NoteGroupDetailView.as_view(),
+        name="note-group-detail"
+    ),
+    path(
+        "note-groups/<int:pk>/update/",
+        views.NoteGroupUpdateView.as_view(),
+        name="note-group-update"
+    ),
+    path(
+        "note-groups/<int:pk>/delete/",
+        views.NoteGroupDeleteView.as_view(),
+        name="note-group-delete"
+    ),
+    path(
+        "note-groups/create/",
+        views.NoteGroupCreateView.as_view(),
+        name="note-group-create"
+    ),
+
 ]
 
 app_name = "note"

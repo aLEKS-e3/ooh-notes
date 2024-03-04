@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ note_group.name }}
+    <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-light link-to-page">
+      ✍️
+    </a>
+
+    <a href="{% url 'note:note-group-delete' pk=note_group.id %}" class="btn btn-danger link-to-page">
+      🗑️
+    </a>
+  </h1>
+  <p>{{ note_group.owner.username }}, {{ note_group.created_at }}</p>
+  <p>Topic: {{ note_group.tag.name }}</p>
+  {% for note in note_group.notes.all %}
+    <a href="{% url 'note:note-detail' pk=note.id %}">{{ note.title }}</a>
+  {% endfor %}
+{% endblock %}

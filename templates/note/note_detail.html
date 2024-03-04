@@ -3,15 +3,15 @@
 {% block content %}
   <h1>
     {{ note.title }}
-    <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-secondary link-to-page">
-      Update
+    <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-light link-to-page">
+      ✍️
     </a>
 
     <a href="{% url 'note:note-delete' pk=note.id %}" class="btn btn-danger link-to-page">
-      Delete
+      🗑️
     </a>
   </h1>
-  <p>{{ note.owner.username }} at {{ note.created_at }}</p>
+  <p>{{ note.owner.username }} on {{ note.created_at }}</p>
   <p>Topics:
       {% for tag in note.tags.all %}
           {{ tag.name }}
