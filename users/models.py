@@ -10,5 +10,8 @@ class TechUser(AbstractUser):
         related_name="tech_users",
     )
 
+    class Meta:
+        ordering = ("username",)
+
     def __str__(self):
         return self.username
