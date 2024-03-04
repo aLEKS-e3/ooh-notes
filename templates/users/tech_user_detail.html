@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Username: {{ techuser.username }}
+{#    <a href="{% url 'taxi:driver-delete' pk=driver.id %}" class="btn btn-danger link-to-page">#}
+{#      Delete#}
+{#    </a>#}
+{##}
+{#    <a href="{% url 'taxi:driver-update' pk=driver.id %}" class="btn btn-secondary link-to-page">#}
+{#      Update license number#}
+{#    </a>#}
+  </h1>
+
+  <p><strong>First name:</strong> {{ techuser.first_name }}</p>
+  <p><strong>Last name:</strong> {{ techuser.last_name }}</p>
+
+  <div class="ml-3">
+    <h4>Notes</h4>
+
+    {% for note in techuser.notes.all %}
+        <hr>
+        <p><a href="{% url 'note:note-detail' pk=note.id %}"><strong>{{ note.title }}</strong></a></p>
+
+    {% empty %}
+      <p>No cars!</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,8 +1,11 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.views.generic import DetailView
 
 from users.forms import TechUserCreationForm
+from users.models import TechUser
 
 
 def registration(request: HttpRequest) -> HttpResponse:
@@ -19,3 +22,8 @@ def registration(request: HttpRequest) -> HttpResponse:
 
     form = TechUserCreationForm()
     return render(request, 'registration/sign_up.html', {'form': form})
+
+
+class TechUserDetailView(LoginRequiredMixin, DetailView):
+    model = TechUser
+    template_name = "users/tech_user_detail.html"
