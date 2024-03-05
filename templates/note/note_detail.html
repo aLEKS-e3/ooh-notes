@@ -1,21 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>
-    {{ note.title }}
-    <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-light link-to-page">
-      ✍️
-    </a>
+  <div class="">
+    <h1>
+      {{ note.title }}
+      {% if user.id == note.owner.id %}
+      <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-outline-dark link-to-page">
+        ✍️
+      </a>
 
-    <a href="{% url 'note:note-delete' pk=note.id %}" class="btn btn-danger link-to-page">
-      🗑️
-    </a>
-  </h1>
-  <p>{{ note.owner.username }} on {{ note.created_at }}</p>
-  <p>Topics:
+      <a href="{% url 'note:note-delete' pk=note.id %}" class="btn btn-outline-danger link-to-page">
+        🗑️
+      </a>
+      {% endif %}
+    </h1>
+    <p>{{ note.owner.username }} on {{ note.created_at }}</p>
+    <p>Topics:
       {% for tag in note.tags.all %}
-          {{ tag.name }}
+        {{ tag.name }};
       {% endfor %}
-  </p>
-  <p>{{ note.body }}</p>
+    </p>
+    <p>{{ note.body }}</p>
+  </div>
 {% endblock %}

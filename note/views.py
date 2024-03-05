@@ -72,10 +72,18 @@ class NoteUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Note
     form_class = NoteForm
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(owner__id=self.request.user.id)
+
 
 class NoteDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Note
     success_url = reverse_lazy("note:note-list")
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(owner__id=self.request.user.id)
 
 
 class NoteGroupListView(LoginRequiredMixin, generic.ListView):
@@ -139,8 +147,16 @@ class NoteGroupUpdateView(LoginRequiredMixin, generic.UpdateView):
     form_class = NoteGroupForm
     template_name = "note/note_group_form.html"
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(owner__id=self.request.user.id)
+
 
 class NoteGroupDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = NoteGroup
     template_name = "note/note_group_confirm_delete.html"
     success_url = reverse_lazy("note:note-group-list")
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(owner__id=self.request.user.id)

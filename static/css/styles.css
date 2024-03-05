@@ -5,8 +5,8 @@ body {
 }
 
 .container {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .card {
@@ -46,7 +46,6 @@ a:hover {
     background-color: #d2d4c8;
     border-radius: 10px;
     color: #000;
-    /*border: 1px solid #000;*/
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -57,19 +56,26 @@ a:hover {
 
 .here-link:hover {
     background-color: #fff;
-    /*color: #fff;*/
-    /*border-color: #fff;*/
 }
 
 .navbar {
     list-style-type: none;
     margin: 10px 0;
     padding: 10px 35px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-sticky {
     overflow: hidden;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: flex-end;
+    margin: 0 0 50px 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .position {
@@ -80,6 +86,7 @@ a:hover {
 .end-item {
     margin-right: auto;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .logo {
@@ -89,4 +96,64 @@ a:hover {
 
 .position a {
     text-decoration: none;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 150px 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.note-list {
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 120vh;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 125px;
+}
+
+.note-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note-item a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.note-item a:hover {
+    text-decoration: underline;
+}
+
+.note-item .note-author {
+    color: #666;
+    font-size: 14px;
+}
+
+.list-view-page {
+    margin: 0 20%;
 }

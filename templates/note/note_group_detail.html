@@ -3,13 +3,16 @@
 {% block content %}
   <h1>
     {{ note_group.name }}
-    <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-light link-to-page">
-      ✍️
-    </a>
+    {% if user.id == note_group.owner.id %}
 
-    <a href="{% url 'note:note-group-delete' pk=note_group.id %}" class="btn btn-danger link-to-page">
-      🗑️
-    </a>
+      <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-outline-dark link-to-page">
+        ✍️
+      </a>
+
+      <a href="{% url 'note:note-group-delete' pk=note_group.id %}" class="btn btn-outline-danger link-to-page">
+        🗑️
+      </a>
+    {% endif %}
   </h1>
   <p>{{ note_group.owner.username }}, {{ note_group.created_at }}</p>
   <p>Topic: {{ note_group.tag.name }}</p>

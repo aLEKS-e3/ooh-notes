@@ -2,40 +2,43 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>
-    Notes
-    <a href="{% url 'note:note-create' %}" class="btn btn-outline-dark link-to-page">
-      +
-    </a>
-  </h1>
-
-  <form action="" method="get" class="form-inline">
-    {{ search_form|crispy }}
-    <input class="btn btn-outline-light" type="submit" value="🔍">
-  </form>
-  <br>
-
-  <form action="" method="get" class="filter-form">
-    {{ filter_form|crispy }}
-    <div class="form-buttons">
-      <input class="btn btn-dark" type="submit" value="Apply filter">
-      <a href="{% url 'note:note-list' %}" class="btn btn-secondary link-to-page">
-        Clear
+  <div>
+    <h1>
+      Notes
+      <a href="{% url 'note:note-create' %}" class="btn btn-outline-dark link-to-page">
+        +
       </a>
-    </div>
-  </form>
-  <br>
+    </h1>
 
-  {% if note_list %}
-    <ul>
-      {% for note in note_list %}
-        <li>
-          <a href="{% url "note:note-detail" pk=note.id %}">"{{ note.title }}"</a>
-          by <a href="{% url "users:profile" pk=note.owner.id %}">{{ note.owner.username }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>There are no notes...</p>
-  {% endif %}
+    <form action="" method="get" class="form-inline">
+      {{ search_form|crispy }}
+      <input class="btn btn-outline-light" type="submit" value="🔍">
+    </form>
+    <br>
+
+    <form action="" method="get" class="filter-form">
+      {{ filter_form|crispy }}
+      <div class="form-buttons">
+        <input class="btn btn-dark" type="submit" value="Apply filter">
+        <a href="{% url 'note:note-list' %}" class="btn btn-secondary link-to-page">
+          Clear
+        </a>
+      </div>
+    </form>
+    <br>
+
+    {% if note_list %}
+      <ul class="note-list">
+        {% for note in note_list %}
+          <li class="note-item">
+            <a href="{% url 'note:note-detail' pk=note.id %}">{{ note.title }}</a>
+            <span class="note-author">by <a
+                href="{% url 'users:profile' pk=note.owner.id %}">{{ note.owner.username }}</a></span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>There are no notes...</p>
+    {% endif %}
+  </div>
 {% endblock %}
