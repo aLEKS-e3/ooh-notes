@@ -15,7 +15,7 @@
         </a>
       {% endif %}
     </h1>
-    <p>{{ note.owner.username }} on {{ note.created_at }}</p>
+    <p><a href="{% url 'users:profile' pk=note.owner.id %}">{{ note.owner.username }}</a> on {{ note.created_at }}</p>
     <p>Topics:
       {% for tag in note.tags.all %}
         {{ tag.name }};
