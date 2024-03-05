@@ -15,20 +15,23 @@
   </form>
   <br>
 
-  <form action="" method="get">
+  <form action="" method="get" class="filter-form">
     {{ filter_form|crispy }}
-    <input class="btn btn-dark" type="submit" value="Apply filter">
-    <a href="{% url 'note:note-list' %}" class="btn btn-secondary link-to-page">
-      Clear
-    </a>  </form>
+    <div class="form-buttons">
+      <input class="btn btn-dark" type="submit" value="Apply filter">
+      <a href="{% url 'note:note-list' %}" class="btn btn-secondary link-to-page">
+        Clear
+      </a>
+    </div>
+  </form>
   <br>
 
   {% if note_list %}
     <ul>
       {% for note in note_list %}
         <li>
-          <a href="{% url "note:note-detail" pk=note.id %}">{{ note.id }}</a>
-          {{ note.title }} ({{ note.owner.username }})
+          <a href="{% url "note:note-detail" pk=note.id %}">"{{ note.title }}"</a>
+          by <a href="{% url "users:profile" pk=note.owner.id %}">{{ note.owner.username }}</a>
         </li>
       {% endfor %}
     </ul>

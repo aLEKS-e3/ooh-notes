@@ -2,11 +2,11 @@
 {% load static %}
 <ul class="navbar">
   <li class="end-item"><a href="{% url 'note:index' %}"><img src="{% static "images/logoo.png" %}" class="logo" alt="logo" />ooh! Notes</a></li>
-  <li class="position btn btn-light"><a href="{% url 'note:note-list' %}">Notes 🗒</a></li>
-  <li class="position btn btn-light"><a href="{% url 'note:note-group-list' %}">Groups 📒</a></li>
+  <a class="position btn btn-light" href="{% url 'note:note-list' %}">Notes ✏️</a>
+  <a class="position btn btn-light" href="{% url 'note:note-group-list' %}">Groups 📒</a>
 
   {% if user.is_authenticated %}
-    <li class=" position btn btn-light"><a href="{{ user.get_absolute_url }}">{{ user.username }} 👨🏻‍💻</a></li>
+    <a class=" position btn btn-light" href="{{ user.get_absolute_url }}">{{ user.username }} 👨🏻‍💻</a>
     <li class="position">
       <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}

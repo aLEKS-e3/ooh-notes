@@ -28,8 +28,8 @@
     <ul>
       {% for group in note_group_list %}
         <li>
-          <a href="{% url "note:note-group-detail" pk=group.id %}">{{ group.id }}</a>
-          {{ group.name }} ({{ group.owner.username }})
+          <a href="{% url "note:note-group-detail" pk=group.id %}">{{ group.name }},</a>
+          created by <a href="{% url "users:profile" pk=group.owner.id %}">{{ group.owner.username }}</a>
         </li>
       {% endfor %}
     </ul>
