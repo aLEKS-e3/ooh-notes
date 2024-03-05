@@ -61,7 +61,7 @@ a:hover {
 .navbar {
     list-style-type: none;
     margin: 10px 0;
-    padding: 10px 35px;
+    padding: 10px 7%;
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -156,4 +156,21 @@ a:hover {
 
 .list-view-page {
     margin: 0 20%;
+}
+
+.pagination .page-item .page-link {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #343b40;
+    color: white;
+    border-color: #343b40;
+}
+
+.button-group{
+    display: inline-block;
+    margin-right: 5%;
 }

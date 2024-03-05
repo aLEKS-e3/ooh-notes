@@ -3,6 +3,8 @@
 {% block content %}
   <h1>
     {{ note_group.name }}
+    <a href="{% url 'note:note-group-list' %}" type="submit" class="btn btn-light">✖</a>
+
     {% if user.id == note_group.owner.id %}
 
       <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-outline-dark link-to-page">

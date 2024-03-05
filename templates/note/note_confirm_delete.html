@@ -2,16 +2,17 @@
 
 {% block content %}
   <h1>Delete note?</h1>
+  <div>
+    <form action="" method="post" style ='float: left; padding: 5px;'>
+      {% csrf_token %}
 
-  <form action="" method="post" class="form-inline">
-    {% csrf_token %}
+      <input type="submit" value="Yes" class="btn btn-danger">
+    </form>
+    <form action="{% url 'note:note-detail' pk=note.id %}" method="get" style ='float: left; padding: 5px;'>
+      {% csrf_token %}
 
-    <input type="submit" value="Yes" class="btn btn-danger">
-  </form>
-  <form action="{% url 'note:note-detail' pk=note.id %}" method="get" class="form-inline">
-    {% csrf_token %}
-
-    <input type="submit" value="Cancel" class="btn btn-secondary">
-  </form>
+      <input type="submit" value="Cancel" class="btn btn-light">
+    </form>
+  </div>
 
 {% endblock %}

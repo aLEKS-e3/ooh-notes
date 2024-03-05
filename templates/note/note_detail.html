@@ -4,14 +4,15 @@
   <div class="">
     <h1>
       {{ note.title }}
+      <a href="{% url 'note:note-list' %}" type="submit" class="btn btn-light">✖</a>
       {% if user.id == note.owner.id %}
-      <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-outline-dark link-to-page">
-        ✍️
-      </a>
+        <a href="{% url 'note:note-update' pk=note.id %}" class="btn btn-outline-dark link-to-page">
+          ✍️
+        </a>
 
-      <a href="{% url 'note:note-delete' pk=note.id %}" class="btn btn-outline-danger link-to-page">
-        🗑️
-      </a>
+        <a href="{% url 'note:note-delete' pk=note.id %}" class="btn btn-outline-danger link-to-page">
+          🗑️
+        </a>
       {% endif %}
     </h1>
     <p>{{ note.owner.username }} on {{ note.created_at }}</p>
