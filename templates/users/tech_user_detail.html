@@ -1,29 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>
-    Username: {{ techuser.username }}
-{#    <a href="{% url 'taxi:driver-delete' pk=driver.id %}" class="btn btn-danger link-to-page">#}
-{#      Delete#}
-{#    </a>#}
-{##}
-{#    <a href="{% url 'taxi:driver-update' pk=driver.id %}" class="btn btn-secondary link-to-page">#}
-{#      Update license number#}
-{#    </a>#}
-  </h1>
+  <div>
+    <h1>
+      Username: {{ techuser.username }}
+      {% if user.id == techuser.id %}
+        <a href="{% url 'users:profile-update' pk=user.id %}" class="btn btn-outline-dark link-to-page">
+          ✍️
+        </a>
+        <a href="{% url 'users:profile-delete' pk=user.id %}" class="btn btn-outline-danger link-to-page">
+          🗑️
+        </a>
 
-  <p><strong>First name:</strong> {{ techuser.first_name }}</p>
-  <p><strong>Last name:</strong> {{ techuser.last_name }}</p>
+      {% endif %}
+    </h1>
 
-  <div class="ml-3">
-    <h4>Notes</h4>
+    <p><strong>First name:</strong> {{ techuser.first_name }}</p>
+    <p><strong>Last name:</strong> {{ techuser.last_name }}</p>
 
-    {% for note in techuser.notes.all %}
+    <div class="ml-3">
+      <h4>Notes</h4>
+
+      {% for note in techuser.notes.all %}
         <hr>
         <p><a href="{% url 'note:note-detail' pk=note.id %}"><strong>{{ note.title }}</strong></a></p>
 
-    {% empty %}
-      <p>No cars!</p>
-    {% endfor %}
+      {% empty %}
+        <p>No notes yet...</p>
+      {% endfor %}
+    </div>
+
+    <div class="ml-3">
+      <h4>Note Groups</h4>
+
+      {% for group in techuser.note_groups.all %}
+        <hr>
+        <p><a href="{% url 'note:note-group-detail' pk=group.id %}"><strong>{{ group.name }}</strong></a></p>
+
+      {% empty %}
+        <p>No groups yet...</p>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}

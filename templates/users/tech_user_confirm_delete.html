@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete profile?</h1>
+  <br>
+  <h4><strong>WARNING!</strong> All notes and groups will be deleted as well</h4>
+  <hr>
+  <form action="" method="post" style='float: left; padding: 5px;'>
+    {% csrf_token %}
+
+    <input type="submit" value="Delete" class="btn btn-danger">
+  </form>
+  <form action="{% url 'users:profile' pk=user.id %}" method="get" style='float: left; padding: 5px;'>
+    {% csrf_token %}
+
+    <input type="submit" value="Cancel" class="btn btn-light">
+  </form>
+{#  <a class="btn btn-light" href="{% url 'users:profile' pk=user.id %}">Cancel</a>#}
+{% endblock %}
