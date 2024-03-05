@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views import generic
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from note.forms import NoteForm, NoteGroupForm, NoteSearchForm, NoteGroupSearchForm, TechTagFilterForm
 from note.models import Note, NoteGroup
@@ -59,6 +60,12 @@ class NoteCreateView(LoginRequiredMixin, generic.CreateView):
     model = Note
     form_class = NoteForm
     success_url = reverse_lazy("note:note-list")
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.owner = self.request.user
+        obj.save()
+        return super().form_valid(form)
 
 
 class NoteUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -119,6 +126,12 @@ class NoteGroupCreateView(LoginRequiredMixin, generic.CreateView):
     form_class = NoteGroupForm
     template_name = "note/note_group_form.html"
     success_url = reverse_lazy("note:note-group-list")
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.owner = self.request.user
+        obj.save()
+        return super().form_valid(form)
 
 
 class NoteGroupUpdateView(LoginRequiredMixin, generic.UpdateView):

@@ -11,13 +11,13 @@ class NoteForm(forms.ModelForm):
 
     class Meta:
         model = Note
-        fields = "__all__"
+        fields = ("title", "body", "tags", "resources",)
 
 
 class NoteGroupForm(forms.ModelForm):
     class Meta:
         model = NoteGroup
-        fields = "__all__"
+        fields = ("name", "notes", "tag",)
 
 
 class NoteSearchForm(forms.Form):
