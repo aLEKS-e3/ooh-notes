@@ -1,20 +1,19 @@
-<ul class="sidebar-nav list-group">
+{# +list-group-item <ul class="sidebar-nav list-group">#}
+{% load static %}
+<ul class="navbar">
+  <li class="end-item"><a href="{% url 'note:index' %}"><img src="{% static "images/logoo.png" %}" class="logo" alt="logo" />ooh! Notes</a></li>
+  <li class="position btn btn-light"><a href="{% url 'note:note-list' %}">Notes 🗒</a></li>
+  <li class="position btn btn-light"><a href="{% url 'note:note-group-list' %}">Groups 📒</a></li>
+
   {% if user.is_authenticated %}
-    <li class="list-group-item"><a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
-    <li class="list-group-item">
+    <li class=" position btn btn-light"><a href="{{ user.get_absolute_url }}">{{ user.username }} 👨🏻‍💻</a></li>
+    <li class="position">
       <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}
-        <input type="submit" value="Log out" class="btn btn-primary" />
+        <input type="submit" value="Log out 🚪" class="btn btn-light" />
       </form>
     </li>
   {% else %}
-    <li class="btn btn-primary"><a style="color: white;" href="{% url 'login'%}?next={{request.path}}">Log In</a></li>
-    <li class="btn btn-primary"><a style="color: white;" href="{% url 'users:sign-up'%}">Sign Up</a></li>
+    <a class="position btn btn-dark" style="color: white;" href="{% url 'login'%}?next={{request.path}}">Log In</a>
   {% endif %}
-
-  <br>
-
-  <li class="list-group-item"><a href="{% url 'note:index' %}">Home</a></li>
-  <li class="list-group-item"><a href="{% url 'note:note-list' %}">Notes</a></li>
-  <li class="list-group-item"><a href="{% url 'note:note-group-list' %}">Groups</a></li>
 </ul>

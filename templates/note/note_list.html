@@ -4,22 +4,22 @@
 {% block content %}
   <h1>
     My Notes
-    <a href="{% url 'note:note-create' %}" class="btn btn-primary link-to-page">
+    <a href="{% url 'note:note-create' %}" class="btn btn-outline-dark link-to-page">
       +
     </a>
   </h1>
 
   <form action="" method="get" class="form-inline">
     {{ search_form|crispy }}
-    <input class="btn btn-secondary" type="submit" value="🔍">
+    <input class="btn btn-outline-light" type="submit" value="🔍">
   </form>
   <br>
 
   <form action="" method="get">
     {{ filter_form|crispy }}
-    <input class="btn btn-primary" type="submit" value="Apply filter">
+    <input class="btn btn-dark" type="submit" value="Apply filter">
     <a href="{% url 'note:note-list' %}" class="btn btn-secondary link-to-page">
-      x
+      Clear
     </a>  </form>
   <br>
 
