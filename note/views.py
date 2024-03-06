@@ -93,7 +93,7 @@ class NoteGroupListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_queryset(self) -> QuerySet:
-        queryset = NoteGroup.objects.all()
+        queryset = NoteGroup.objects.select_related("owner")
         form = NoteGroupSearchForm(self.request.GET)
         tag = TechTagFilterForm(self.request.GET)
 
