@@ -19,6 +19,11 @@ urlpatterns = [
         views.TechUserDeleteView.as_view(),
         name="profile-delete"
     ),
+    path(
+        "profile/<int:pk>/coupon/",
+        views.coupon_code_view,
+        name="coupon"
+    )
 ]
 
 app_name = "users"
