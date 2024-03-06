@@ -28,7 +28,7 @@
 
     <div id="notesContent" class="hidden">
       <h4>Notes</h4>
-      {% if techuser.notes.all %}
+      {% if techuser.notes %}
         <ul class="note-list">
           {% for note in techuser.notes.all %}
             <a href="{% url 'note:note-detail' pk=note.id %}">

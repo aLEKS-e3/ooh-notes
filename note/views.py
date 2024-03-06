@@ -124,7 +124,9 @@ class NoteGroupListView(LoginRequiredMixin, generic.ListView):
 
 
 class NoteGroupDetailView(LoginRequiredMixin, generic.DetailView):
-    queryset = NoteGroup.objects.select_related("owner").select_related("tag")
+    queryset = NoteGroup.objects.prefetch_related(
+        "notes__owner"
+    ).select_related("tag").select_related("owner")
     context_object_name = "note_group"
     template_name = "note/note_group_detail.html"
 
