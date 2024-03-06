@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div class="">
-    <h1>
+
+  <div class="note-view">
+    <h1 class="title">
       {{ note.title }}
       <a href="{% url 'note:note-list' %}" type="submit" class="btn btn-light">✖</a>
       {% if user.id == note.owner.id %}
@@ -15,12 +16,25 @@
         </a>
       {% endif %}
     </h1>
-    <p><a href="{% url 'users:profile' pk=note.owner.id %}">{{ note.owner.username }}</a> on {{ note.created_at }}</p>
-    <p>Topics:
+    <div class="meta">
+      <span class="author">
+        <a href="{% url 'users:profile' pk=note.owner.id %}">
+          {{ note.owner.username }},
+        </a>
+      </span>
+      <span class="time">Date: {{ note.created_at }}</span>
+    </div>
+    <div class="tags">
+      Tags:
       {% for tag in note.tags.all %}
-        {{ tag.name }};
+        <span class="tag">{{ tag.name }}</span>;
       {% endfor %}
-    </p>
-    <p>{{ note.body }}</p>
+    </div>
+    <hr>
+    <div class="body">
+      {{ note.body }}
+    </div>
   </div>
+
+
 {% endblock %}

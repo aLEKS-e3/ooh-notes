@@ -31,7 +31,9 @@
       <ul class="note-list">
         {% for note in note_list %}
           <li class="note-item">
-            <a href="{% url 'note:note-detail' pk=note.id %}">🗒 {{ note.title }}</a>
+            🗒 <a href="{% url 'note:note-detail' pk=note.id %}">
+              {{ note.title }}
+            </a>
             <span class="note-author">by <a
                 href="{% url 'users:profile' pk=note.owner.id %}">{{ note.owner.username }}</a></span>
           </li>
