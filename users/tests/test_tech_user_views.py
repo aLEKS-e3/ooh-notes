@@ -72,3 +72,16 @@ class PrivateTechUserViewsTest(TestCase):
 
         response = self.client.get(USER_PROFILE_URL + "/delete/")
         self.assertEqual(response.status_code, 404)
+
+    def test_coupon_get_request_response(self):
+        response = self.client.get(USER_PROFILE_URL + "coupon/")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "users/coupon_code_form.html")
+
+    def test_coupon_successful_post_request_response(self):
+        response = self.client.post(
+            USER_PROFILE_URL + "coupon/",
+            data={"coupon_code": "1111-1111-1111"}
+        )
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "users/coupon_code_gift.html")
