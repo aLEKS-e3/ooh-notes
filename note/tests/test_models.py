@@ -5,7 +5,7 @@ from django.urls import reverse
 from note.models import TechTag, Note, NoteGroup
 
 
-class ModelsTest(TestCase):
+class NoteModelsTest(TestCase):
     def setUp(self):
         self.tag = TechTag.objects.create(name="Ruby")
         self.user = get_user_model().objects.create_user(
