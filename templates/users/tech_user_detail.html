@@ -31,8 +31,8 @@
       {% if techuser.notes %}
         <ul class="note-list">
           {% for note in techuser.notes.all %}
-            <a href="{% url 'note:note-detail' pk=note.id %}">
-              <p class="note-item"><span class="emoji">🗒</span> {{ note.title }}</p>
+            <a style="text-decoration: none;" href="{% url 'note:note-detail' pk=note.id %}">
+              <p class="note-item">🗒 {{ note.title }}</p>
             </a>
           {% endfor %}
         </ul>
@@ -46,7 +46,7 @@
       {% if techuser.note_groups.all %}
         <ul class="note-list">
           {% for group in techuser.note_groups.all %}
-            <a href="{% url 'note:note-group-detail' pk=group.id %}">
+            <a style="text-decoration: none;" href="{% url 'note:note-group-detail' pk=group.id %}">
               <p class="note-item"><span class="emoji">📒</span> {{ group.name }}</p>
             </a>
           {% endfor %}
