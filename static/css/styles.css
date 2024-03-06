@@ -4,13 +4,17 @@ body {
     font-family: Consolas, ui-serif;
 }
 
+li {
+    list-style: none;
+}
+
 .container {
     margin-top: 10%;
     margin-bottom: 10%;
 }
 
 .card {
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
 
 .card-body {
@@ -42,6 +46,23 @@ a:hover {
     color: #000;
 }
 
+.index-head {
+    font-size: 4rem;
+}
+
+.index-p {
+    font-size: 1.2rem;
+}
+
+.index-btn {
+    font-size: 1.2rem;
+}
+
+.oh-yes {
+    background: black;
+    color: white;
+}
+
 .here-link {
     background-color: #d2d4c8;
     border-radius: 10px;
@@ -60,8 +81,8 @@ a:hover {
 
 .navbar {
     list-style-type: none;
-    margin: 10px 0;
-    padding: 10px 7%;
+    margin: 0;
+    padding: 20px 7%;
     display: flex;
     justify-content: flex-end;
     width: 100%;
@@ -75,7 +96,7 @@ a:hover {
     width: 100%;
     background-color: white;
     z-index: 1;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .position {
@@ -170,7 +191,7 @@ a:hover {
     border-color: #343b40;
 }
 
-.button-group{
+.button-group {
     display: inline-block;
     margin-right: 5%;
 }

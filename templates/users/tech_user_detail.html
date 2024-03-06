@@ -11,38 +11,62 @@
         <a href="{% url 'users:profile-delete' pk=user.id %}" class="btn btn-outline-danger link-to-page">
           🗑️
         </a>
-
+        <a href="{% url 'users:coupon' pk=user.id %}" class="btn btn-outline-success link-to-page">
+          🎟
+        </a>
       {% endif %}
     </h1>
-
-    <p>{{ techuser.first_name }} {{ techuser.last_name }}</p>
-    <p><strong>email: </strong>{{ techuser.email }}</p>
     <br>
 
-    <h4>Notes</h4>
-    {% if techuser.notes.all %}
-      <ul class="note-list">
-        {% for note in techuser.notes.all %}
-          <a href="{% url 'note:note-detail' pk=note.id %}">
-            <p class="note-item"><span class="emoji">🗒</span> {{ note.title }}</p>
-          </a>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>There are no notes...</p>
-    {% endif %}
+    <p>{{ techuser.first_name }} {{ techuser.last_name }}</p>
+    <p><strong>email: </strong>{% if techuser.email %}{{ techuser.email }}{% else %}no email :({% endif %}</p>
+    <br>
 
-    <h4>Note Groups</h4>
-    {% if techuser.note_groups.all %}
-      <ul class="note-list">
-        {% for group in techuser.note_groups.all %}
-          <a href="{% url 'note:note-group-detail' pk=group.id %}">
-            <p class="note-item"><span class="emoji">📒</span> {{ group.name }}</p>
-          </a>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p>There are no groups...</p>
-    {% endif %}
+    <button class="btn btn-dark" onclick="showNotes()">Notes</button>
+    <button class="btn btn-outline-dark" onclick="showNoteGroups()">Note Groups</button>
+    <hr>
+
+    <div id="notesContent" class="hidden">
+      <h4>Notes</h4>
+      {% if techuser.notes.all %}
+        <ul class="note-list">
+          {% for note in techuser.notes.all %}
+            <a href="{% url 'note:note-detail' pk=note.id %}">
+              <p class="note-item"><span class="emoji">🗒</span> {{ note.title }}</p>
+            </a>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>There are no notes...</p>
+      {% endif %}
+    </div>
+
+    <div id="noteGroupsContent" class="hidden">
+      <h4>Note Groups</h4>
+      {% if techuser.note_groups.all %}
+        <ul class="note-list">
+          {% for group in techuser.note_groups.all %}
+            <a href="{% url 'note:note-group-detail' pk=group.id %}">
+              <p class="note-item"><span class="emoji">📒</span> {{ group.name }}</p>
+            </a>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>There are no groups...</p>
+      {% endif %}
+    </div>
+
+    <script>
+        function showNotes() {
+            document.getElementById('notesContent').style.display = 'block';
+            document.getElementById('noteGroupsContent').style.display = 'none';
+        }
+
+        function showNoteGroups() {
+            document.getElementById('notesContent').style.display = 'none';
+            document.getElementById('noteGroupsContent').style.display = 'block';
+        }
+    </script>
+
   </div>
 {% endblock %}

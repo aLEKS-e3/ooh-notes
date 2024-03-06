@@ -2,10 +2,32 @@
 
 {% block content %}
 
-  <div class="container">
-    <h1>Notes App</h1>
-    <p>A simple and minimalist notes app to organize your thoughts.</p>
-    <a href="/notes" class="btn">Get Started</a>
+  <div class="index-block">
+    <h1 class="index-head">ooh! Your Notes</h1>
+    <br>
+    <h3>Your Ultimate Note-Taking Companion</h3>
+    <br>
+    <p class="index-p">Welcome to Ooh! Notes – the ultimate solution for all your note-taking needs.
+      Say goodbye to scattered thoughts and disorganized ideas. With Ooh! Notes, jotting down your ideas, thoughts,
+      and to-dos has never been easier or more enjoyable.
+    </p>
+    <br>
+    <h4><strong>Features:</strong></h4>
+    <br>
+    <p class="index-p">
+      <strong>Simple and Intuitive:</strong> Ooh! Notes is designed to be simple and intuitive,
+      allowing you to focus on capturing your ideas without any distractions.
+    </p>
+    <br>
+    <p class="index-p">
+      <strong>Organize with Ease:</strong> Keep your notes organized effortlessly with our intuitive tagging system.
+      Categorize your notes for easy access and retrieval.
+    </p>
+    <br>
+    <a class="index-btn btn btn-dark" href="{% url 'users:sign-up' %}">Start now!</a>
+    <br>
+    <br>
+    <br>
   </div>
 
 {% endblock %}

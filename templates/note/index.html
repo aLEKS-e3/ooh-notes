@@ -1,13 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>ooh! Your Notes</h1>
-  <p>Keep everything at hand!</p>
-  <h2>Navigation</h2>
-  <p>Options:</p>
-  <ul>
-    <li><a href="{% url 'note:note-list' %}">All notes!</a></li>
-    <li><a href="{% url 'note:note-group-list' %}">All groups!</a></li>
-    {#        <li>{% url "" %}</li>#}
-  </ul>
+  <div class="index-block">
+    <h1 class="index-head">
+      <span class="oh-yes">ooh Yes!</span>
+      <br> Note-Taking Tips with Ooh! Notes
+    </h1>
+    <br>
+    <h3>1. Capture Ideas Instantly</h3>
+    <br>
+    <p class="index-p">
+      Whether it's a brilliant thought or a sudden burst of inspiration,
+      don't let it slip away. Use Ooh! Notes to capture your ideas instantly, wherever you are.
+      With quick access and intuitive controls, jotting down your thoughts has never been easier.
+    </p>
+    <br>
+    <h3>2. Stay Organized with Tags</h3>
+    <br>
+    <p class="index-p">
+      Keep your notes organized and easily searchable by utilizing tags. Assign relevant keywords or categories to your
+      notes using Ooh! Notes' tagging system. This simple yet powerful feature helps you find what you need, when you
+      need it, with just a few clicks.
+    </p>
+    <br>
+    <h3>3. Review and Reflect</h3>
+    <br>
+    <p class="index-p">
+      Regularly review and reflect on your notes to reinforce learning and spark new ideas. Use Ooh! Notes' powerful
+      search and filtering capabilities to revisit past notes, identify patterns, and gain new insights. Your notes
+      aren't just for capturing information – they're valuable tools for personal growth and development.
+    </p>
+    <br>
+    <a class="index-btn btn btn-dark" href="{% url 'note:note-create' %}">Create a note!</a>
+    <br>
+    <br>
+    <br>
+  </div>
 {% endblock %}
