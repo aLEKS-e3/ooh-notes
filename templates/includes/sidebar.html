@@ -6,7 +6,7 @@
   <a class="position btn btn-light" href="{% url 'note:note-group-list' %}">Groups 📒</a>
 
   {% if user.is_authenticated %}
-    <a class=" position btn btn-light" href="{{ user.get_absolute_url }}">{{ user.username }} 👨🏻‍💻</a>
+    <a class=" position btn btn-light" href="{{ user.get_absolute_url }}">Profile 👨🏻‍💻</a>
     <li class="position">
       <form method="post" action="{% url 'logout' %}">
         {% csrf_token %}

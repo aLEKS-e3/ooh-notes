@@ -22,7 +22,7 @@ class NoteListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_queryset(self) -> QuerySet:
-        queryset = Note.objects.all()
+        queryset = Note.objects.select_related("owner")
         form = NoteSearchForm(self.request.GET)
         tag = TechTagFilterForm(self.request.GET)
 
@@ -53,7 +53,7 @@ class NoteListView(LoginRequiredMixin, generic.ListView):
 
 
 class NoteDetailView(LoginRequiredMixin, generic.DetailView):
-    model = Note
+    queryset = Note.objects.select_related("owner")
 
 
 class NoteCreateView(LoginRequiredMixin, generic.CreateView):
@@ -124,7 +124,7 @@ class NoteGroupListView(LoginRequiredMixin, generic.ListView):
 
 
 class NoteGroupDetailView(LoginRequiredMixin, generic.DetailView):
-    model = NoteGroup
+    queryset = NoteGroup.objects.select_related("owner").select_related("tag")
     context_object_name = "note_group"
     template_name = "note/note_group_detail.html"
 

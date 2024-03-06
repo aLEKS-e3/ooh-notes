@@ -26,7 +26,7 @@ def registration(request: HttpRequest) -> HttpResponse:
 
 
 class TechUserDetailView(LoginRequiredMixin, generic.DetailView):
-    model = TechUser
+    queryset = TechUser.objects.prefetch_related("note_groups")
     template_name = "users/tech_user_detail.html"
 
 

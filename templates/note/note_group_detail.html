@@ -19,6 +19,7 @@
   <p><a href="{% url 'users:profile' pk=note_group.owner.id %}">{{ note_group.owner.username }}</a>, {{ note_group.created_at }}</p>
   <p>Topic: {{ note_group.tag.name }}</p>
   {% for note in note_group.notes.all %}
-    <a href="{% url 'note:note-detail' pk=note.id %}">{{ note.title }}</a>
+    <a href="{% url 'note:note-detail' pk=note.id %}">🗒 {{ note.title }}</a>
+    <hr>
   {% endfor %}
 {% endblock %}
