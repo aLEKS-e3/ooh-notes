@@ -34,6 +34,15 @@
     <div class="body">
       {{ note.body }}
     </div>
+    <div>
+      {% if note.resources %}
+        <hr>
+        <p>
+          <strong>Resources: </strong>
+          {{ note.resources }}
+        </p>
+      {% endif %}
+    </div>
   </div>
 
 
