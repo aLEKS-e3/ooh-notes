@@ -1,12 +1,17 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import generic
-from django.urls import reverse_lazy, reverse
+from django.urls import reverse_lazy
 
-from note.forms import NoteForm, NoteGroupForm, NoteSearchForm, NoteGroupSearchForm, TechTagFilterForm
+from note.forms import (
+    NoteForm,
+    NoteGroupForm,
+    NoteSearchForm,
+    NoteGroupSearchForm,
+    TechTagFilterForm
+)
 from note.models import Note, NoteGroup
 
 
