@@ -171,17 +171,20 @@ a:hover {
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .note-item a {
     color: #333;
     text-decoration: none;
     font-size: 18px;
+
 }
 
 .note-item a:hover {
     text-decoration: underline;
+    background-color: #000;
+
 }
 
 .note-item .note-author {
@@ -251,27 +254,27 @@ a:hover {
 /* Authorization pages styles */
 
 .auth-background {
-    background: #343b40;
+    background-repeat: no-repeat
 }
 
 .auth-body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*height: 75vh;*/
     min-height: 100%;
     margin: 0;
 }
 
 .auth-header-block {
+    margin-top: 25vh;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .auth-form-container {
-    background: white;
+    background: #fff;
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 50px;
-
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
 }
