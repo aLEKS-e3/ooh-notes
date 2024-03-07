@@ -1,28 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-  {#  <h1>#}
-  {#    {{ note_group.name }}#}
-  {#    <a href="{% url 'note:note-group-list' %}" type="submit" class="btn btn-light">✖</a>#}
-  {##}
-  {#    {% if user.id == note_group.owner.id %}#}
-  {##}
-  {#      <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-outline-dark link-to-page">#}
-  {#        ✍️#}
-  {#      </a>#}
-  {##}
-  {#      <a href="{% url 'note:note-group-delete' pk=note_group.id %}" class="btn btn-outline-danger link-to-page">#}
-  {#        🗑️#}
-  {#      </a>#}
-  {#    {% endif %}#}
-  {#  </h1>#}
-  {#  <p><a href="{% url 'users:profile' pk=note_group.owner.id %}">{{ note_group.owner.username }}</a>, {{ note_group.created_at }}</p>#}
-  {#  <p>Topic: {{ note_group.tag.name }}</p>#}
-  {#  {% for note in note_group.notes.all %}#}
-  {#    <a href="{% url 'note:note-detail' pk=note.id %}">🗒 {{ note.title }}</a>#}
-  {#    <hr>#}
-  {#  {% endfor %}#}
-
   <div class="note-view">
     <h1 class="title">
       {{ note_group.name }}
@@ -53,8 +31,8 @@
         <hr>
         🗒
         <a href="{% url 'note:note-detail' pk=note.id %}">
-           {{ note.title }}
-        </a>by {{ note.owner.username }}
+          {{ note.title }}
+        </a>by <a href="{% url 'users:profile' pk=note.owner.id  %}">{{ note.owner.username }}</a>
       {% endfor %}
     </div>
   </div>

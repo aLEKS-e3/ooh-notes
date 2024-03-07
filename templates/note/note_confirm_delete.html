@@ -8,7 +8,7 @@
 
       <input type="submit" value="Yes" class="btn btn-danger">
     </form>
-    <form action="{% url 'note:note-detail' pk=note.id %}" method="get" style ='float: left; padding: 5px;'>
+    <form action="{% url 'note:note-detail' pk=note.id %}" method="get" style='float: left; padding: 5px;'>
       {% csrf_token %}
 
       <input type="submit" value="Cancel" class="btn btn-light">
