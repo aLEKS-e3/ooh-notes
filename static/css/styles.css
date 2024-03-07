@@ -43,7 +43,7 @@ a:hover {
 }
 
 .card {
-    border: 2px solid #000;
+    /*border: 2px solid #000;*/
 }
 
 .card-body {
@@ -183,7 +183,6 @@ a:hover {
 
 .note-item a:hover {
     text-decoration: underline;
-    background-color: #000;
 
 }
 
@@ -210,6 +209,7 @@ a:hover {
 }
 
 /* Note detail view repr */
+
 .title {
     font-size: 2rem;
     color: #333;
@@ -271,10 +271,19 @@ a:hover {
     color: black;
 }
 
-.auth-form-container {
+.form-container {
     background: #fff;
     padding: 50px;
     border-radius: 20px;
     margin-bottom: 50px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.to-low {
+    margin-top: 12vh;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
 }

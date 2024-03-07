@@ -24,10 +24,6 @@ def registration(request: HttpRequest) -> HttpResponse:
                 password=form.cleaned_data['password1'],
             )
             login(request, new_user)
-            messages.success(
-                request,
-                "Thanks for registering. You are now logged in."
-            )
             return HttpResponseRedirect(reverse_lazy("note:index"))
 
     return render(request, 'registration/sign_up.html', {'form': form})
@@ -66,7 +62,6 @@ def coupon_code_view(request: HttpRequest, pk: int) -> HttpResponse:
         form = CouponForm(request.POST)
 
         if form.is_valid():
-            messages.success(request, "Thanks! Here is your gift!")
             return render(request, 'users/coupon_code_gift.html')
 
     return render(request, 'users/coupon_code_form.html', {'form': form})

@@ -18,16 +18,24 @@
     </h1>
     <br>
 
-    <p>{{ techuser.first_name }} {{ techuser.last_name }}</p>
+    {% if techuser.first_name or techuser.last_name %}
+      <p>
+        {{ techuser.first_name }} {{ techuser.last_name }}
+      </p>
+    {% endif %}
     <p><strong>email: </strong>{% if techuser.email %}{{ techuser.email }}{% else %}no email :({% endif %}</p>
     <br>
 
-    <button class="btn btn-dark" onclick="showNotes()">My Notes</button>
-    <button class="btn btn-outline-dark" onclick="showNoteGroups()">My Note Groups</button>
+    <button class="btn btn-dark" onclick="showNotes()">
+      {% if user.id == techuser.id %}My {% endif %}Notes
+    </button>
+    <button class="btn btn-outline-dark" onclick="showNoteGroups()">
+      {% if user.id == techuser.id %}My {% endif %}Note Groups
+    </button>
     <hr>
 
     <div id="notesContent" class="hidden">
-      <h4>My Notes</h4>
+      <h4>{% if user.id == techuser.id %}My {% endif %}Notes</h4>
       {% if techuser.notes %}
         <ul class="note-list">
           {% for note in techuser.notes.all %}
@@ -42,7 +50,7 @@
     </div>
 
     <div id="noteGroupsContent" class="hidden">
-      <h4>My Note Groups</h4>
+      <h4>{% if user.id == techuser.id %}My {% endif %}Note Groups</h4>
       {% if techuser.note_groups.all %}
         <ul class="note-list">
           {% for group in techuser.note_groups.all %}

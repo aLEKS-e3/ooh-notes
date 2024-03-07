@@ -26,7 +26,7 @@
   <div class="note-view">
     <h1 class="title">
       {{ note_group.name }}
-      <a href="{% url 'note:note-list' %}" type="submit" class="btn btn-light">✖</a>
+      <a href="{% url 'note:note-list' %}" type="submit" class="btn btn-light">❌</a>
       {% if user.id == note_group.owner.id %}
         <a href="{% url 'note:note-group-update' pk=note_group.id %}" class="btn btn-outline-dark link-to-page">
           ✍️

@@ -2,22 +2,20 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <br style="margin-top: 4%;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <div class="card">
-          <div class="card-body">
-            <h1 class="text-center mb-4">Enter your coupon code!</h1>
-            <h3 class="text-center mb-4">Who knows, maybe it's your lucky day!</h3>
-            <form method="POST">
-              {% csrf_token %}
-              {{ form|crispy }}
-              <button type="submit" class="btn btn-dark btn-block">Register</button>
-            </form>
-          </div>
-        </div>
+  <div class="col-md-11 form-container to-low">
+    <a href="{% url 'users:profile' pk=user.id %}" type="submit" class="btn">❌</a>
+
+    <h1 class="mb-4 text-center">
+      Enter your coupon code!
+    </h1>
+    <h3 class="text-center mb-4">Who knows, maybe it's your lucky day!</h3>
+    <form method="POST" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <hr>
+      <div class="buttons-container">
+        <button type="submit" class="btn btn-dark btn-block">Validate</button>
       </div>
-    </div>
+    </form>
   </div>
 {% endblock %}
