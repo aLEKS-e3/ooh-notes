@@ -22,12 +22,12 @@
     <p><strong>email: </strong>{% if techuser.email %}{{ techuser.email }}{% else %}no email :({% endif %}</p>
     <br>
 
-    <button class="btn btn-dark" onclick="showNotes()">Notes</button>
-    <button class="btn btn-outline-dark" onclick="showNoteGroups()">Note Groups</button>
+    <button class="btn btn-dark" onclick="showNotes()">My Notes</button>
+    <button class="btn btn-outline-dark" onclick="showNoteGroups()">My Note Groups</button>
     <hr>
 
     <div id="notesContent" class="hidden">
-      <h4>Notes</h4>
+      <h4>My Notes</h4>
       {% if techuser.notes %}
         <ul class="note-list">
           {% for note in techuser.notes.all %}
@@ -42,7 +42,7 @@
     </div>
 
     <div id="noteGroupsContent" class="hidden">
-      <h4>Note Groups</h4>
+      <h4>My Note Groups</h4>
       {% if techuser.note_groups.all %}
         <ul class="note-list">
           {% for group in techuser.note_groups.all %}

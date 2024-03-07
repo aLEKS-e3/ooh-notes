@@ -1,7 +1,9 @@
-{% extends "base.html" %}
+{% extends "registration/auth_base.html" %}
 
 {% block content %}
-  <h2>Logged out!</h2>
-
-  <a class="here-link" href="{% url 'login' %}">Log in again!</a>
+  <div class="auth-header-block">
+  <h2>You're logged out...</h2>
+  <br>
+  <a class="btn btn-outline-light" href="{% url 'login' %}">Log in again!</a>
+  </div>
 {% endblock %}
