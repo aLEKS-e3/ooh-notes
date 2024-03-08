@@ -1,4 +1,4 @@
-# Note taking app "ooh! Notes"
+# Note-taking app "ooh! Notes"
 
 This Python ooh! Notes Project is a simple application for managing notes with ooh! Yes exclamations. 
 It allows you to create, view, update, group and delete notes through a user-friendly interface.
