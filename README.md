@@ -1,7 +1,7 @@
 # Note taking app "ooh! Notes"
 
-An app that allow you to find, share and create information about the world of IT,
-inspired by my deep creativity (and a bit of Notion).
+This Python ooh! Notes Project is a simple application for managing notes with ooh! Yes exclamations. 
+It allows you to create, view, update, group and delete notes through a user-friendly interface.
 
 ## Features
 
