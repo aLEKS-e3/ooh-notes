@@ -18,19 +18,24 @@ Check my project at render: [ooh!-notes](https://ooh-notes.onrender.com/)
 
 I assume you already have Python3 installed.
 
-In terminal write down following command:
+Too easily use this project, firstly, clone the repository on your desktop:
 
 ```shell
 git clone https://github.com/aLEKS-e3/ooh-notes.git
+```
+
+Then open it in your IDE and write down following commands in terminal:
+
+```shell
 python -m venv venv
-source venv/bin/activate  # for Windows use: venv\scripts\activate
+source venv/bin/activate  # for Windows: venv\scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py collectstatic
 python manage.py runserver
 ```
 
-Also for testing you can load already prepared data:
+Also, if you want to test, I have prepared some data for you!:
 
 ```shell
 python manage.py loaddata notes_db.json
