@@ -23,7 +23,6 @@ def index(request: HttpRequest) -> HttpResponse:
 
 class NoteListView(LoginRequiredMixin, generic.ListView):
     model = Note
-    template_name = "note/note_list.html"
     paginate_by = 5
 
     def get_queryset(self) -> QuerySet:
