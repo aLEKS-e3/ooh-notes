@@ -2,8 +2,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
-from django.views import generic
 from django.urls import reverse_lazy
+from django.views import generic
 
 from note.forms import (
     NoteForm,
@@ -42,8 +42,8 @@ class NoteListView(LoginRequiredMixin, generic.ListView):
 
         return queryset
 
-    def get_context_data(self, *, object_list=None, **kwargs) -> dict:
-        context = super(NoteListView, self).get_context_data(**kwargs)
+    def get_context_data(self, *args, object_list=None, **kwargs) -> dict:
+        context = super().get_context_data(**kwargs)
         title = self.request.GET.get("title", "")
         tag = self.request.GET.get("tag", "")
 
@@ -113,8 +113,8 @@ class NoteGroupListView(LoginRequiredMixin, generic.ListView):
             )
         return queryset
 
-    def get_context_data(self, *, object_list=None, **kwargs) -> dict:
-        context = super(NoteGroupListView, self).get_context_data(**kwargs)
+    def get_context_data(self, *args, object_list=None, **kwargs) -> dict:
+        context = super().get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         tag = self.request.GET.get("tag", "")
 
