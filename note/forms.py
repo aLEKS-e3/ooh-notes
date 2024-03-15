@@ -15,6 +15,11 @@ class NoteForm(forms.ModelForm):
 
 
 class NoteGroupForm(forms.ModelForm):
+    notes = forms.ModelMultipleChoiceField(
+        queryset=Note.objects.all(),
+        widget=forms.CheckboxSelectMultiple
+    )
+
     class Meta:
         model = NoteGroup
         fields = ("name", "notes", "tag",)

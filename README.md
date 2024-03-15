@@ -14,6 +14,11 @@ It allows you to create, view, update, group and delete notes through a user-fri
 
 Check my project at render: [ooh!-notes](https://ooh-notes.onrender.com/)
 
+Feel free to use next credentials to log in and explore:
+
+- Username: ```PeterPen```
+- Password: ```_qw3rty_```
+
 ## Installation instructions
 
 I assume you already have Python3 installed.
