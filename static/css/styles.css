@@ -1,0 +1,289 @@
+/* General HTML styles */
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Consolas, ui-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+/* General block styles */
+
+.flex-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 120vh;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 125px;
+}
+
+/* Form styles */
+
+.container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.card {
+    /*border: 2px solid #000;*/
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.form-control {
+    border: 1px solid #000;
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: none;
+}
+
+.text-primary {
+    color: #000 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.here-link {
+    background-color: #d2d4c8;
+    border-radius: 10px;
+    color: #000;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.here-link:hover {
+    background-color: #fff;
+}
+
+/* Index and landing styles */
+
+.index-head {
+    font-size: 4rem;
+}
+
+.index-p {
+    font-size: 1.2rem;
+}
+
+.index-btn {
+    font-size: 1.2rem;
+}
+
+.oh-yes {
+    background: black;
+    color: white;
+}
+
+/* Navigation bar styles */
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.navbar-sticky {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    margin: 0 0 50px 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.position {
+    float: left;
+    margin-left: 10px;
+}
+
+.end-item {
+    margin-right: auto;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo {
+    width: 65px;
+    height: auto;
+}
+
+.position a {
+    text-decoration: none;
+}
+
+/* Footer styles */
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 150px 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+/* Note +group list and detail styles */
+
+.note-list {
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.note-item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.note-item a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.note-item a:hover {
+    text-decoration: underline;
+
+}
+
+.note-item .note-author {
+    color: #666;
+    font-size: 14px;
+}
+
+.list-view-page {
+    margin: 0 20%;
+}
+
+.button-group {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.note-view {
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Note detail view repr */
+
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.meta {
+    margin-bottom: 10px;
+}
+
+.author, .time {
+    font-size: 0.8rem;
+    color: #666;
+    margin-right: 10px;
+}
+
+.tags {
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Pagination */
+
+.pagination .page-item .page-link {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #343b40;
+    color: white;
+    border-color: #343b40;
+}
+
+/* Authorization pages styles */
+
+.auth-background {
+    background-repeat: no-repeat
+}
+
+.auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin: 0;
+}
+
+.auth-header-block {
+    margin-top: 25vh;
+    text-align: center;
+    color: black;
+}
+
+.form-container {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.to-low {
+    margin-top: 12vh;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+}

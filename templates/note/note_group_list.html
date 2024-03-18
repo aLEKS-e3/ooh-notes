@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div>
+    <h1>
+      Note Groups
+      <a href="{% url 'note:note-group-create' %}" class="btn btn-outline-dark link-to-page">
+        +
+      </a>
+    </h1>
+
+    <form action="" method="get" class="form-inline">
+      {{ search_form|crispy }}
+      <input class="btn btn-outline-light" type="submit" value="🔍">
+    </form>
+    <br>
+
+    <form action="" method="get">
+      {{ filter_form|crispy }}
+      <input class="btn btn-dark" type="submit" value="Apply filter">
+      <a href="{% url 'note:note-group-list' %}" class="btn btn-secondary link-to-page">
+        Clear
+      </a>
+    </form>
+    <br>
+
+    {% if note_group_list %}
+      <ul class="note-list">
+        {% for group in note_group_list %}
+          <li class="note-item">
+            📒 <a href="{% url 'note:note-group-detail' pk=group.id %}">{{ group.name }}</a>
+            <span class="note-author">by <a
+                href="{% url 'users:profile' pk=group.owner.id %}">{{ group.owner.username }}</a></span>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>There are no groups...</p>
+    {% endif %}
+  </div>
+{% endblock %}

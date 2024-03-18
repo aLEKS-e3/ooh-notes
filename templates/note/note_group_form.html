@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="col-md-10 form-container to-low">
+    <a href="{% url 'note:note-group-list' %}" type="submit" class="btn">❌</a>
+
+    <h2 class="text-center">{{ object|yesno:"Update,Create" }} Note Group</h2>
+    <br>
+    <form method="POST" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <hr>
+      <button type="submit" class="btn btn-dark btn-block">Create</button>
+    </form>
+  </div>
+
+{% endblock %}

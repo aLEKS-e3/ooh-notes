@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="col-md-11 form-container to-low">
+    <a href="{% url 'users:profile' pk=user.id %}" type="submit" class="btn">❌</a>
+
+    <h1 class="mb-4 text-center">
+      Enter your coupon code!
+    </h1>
+    <h3 class="text-center mb-4">Who knows, maybe it's your lucky day!</h3>
+    <form method="POST" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <hr>
+      <div class="buttons-container">
+        <button type="submit" class="btn btn-dark btn-block">Validate</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

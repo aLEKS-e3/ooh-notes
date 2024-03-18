@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="col-md-10 form-container">
+    <a href="{% url 'users:profile' pk=user.id %}" type="submit" class="btn">❌</a>
+
+    <h2 class="text-center">
+      Update Personal Info
+    </h2>
+    <br>
+    <form method="POST" novalidate>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <hr>
+      <div class="buttons-container">
+        <button type="submit" class="btn btn-dark btn-block">Update</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
+

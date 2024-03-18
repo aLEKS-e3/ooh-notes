@@ -1,0 +1,985 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-03-04T11:21:31.897Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-03-04T11:21:36.796Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "Java",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-03-04T11:21:41.997Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "3",
+      "object_repr": "JavaScript",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-03-04T11:21:50.786Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "Django",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-03-04T11:21:56.320Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "C",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2024-03-04T11:22:04.487Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "6",
+      "object_repr": "C#",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2024-03-04T11:22:08.110Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "7",
+      "object_repr": "C++",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2024-03-04T11:23:28.932Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "michael_code",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2024-03-04T11:24:06.010Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "dj -> Python",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Skill\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2024-03-04T12:26:36.931Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "8",
+      "object_repr": "Networking",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2024-03-04T12:26:42.274Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "How The Web Works 🌎 by dj --> Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2024-03-04T13:51:42.159Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Python cheat sheet by dj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2024-03-04T18:20:29.420Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "7",
+      "object_repr": "C++",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2024-03-04T18:20:29.423Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "6",
+      "object_repr": "C#",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2024-03-04T18:20:29.427Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "C",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2024-03-04T18:20:29.431Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "3",
+      "object_repr": "JavaScript",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2024-03-05T13:59:22.375Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "pj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2024-03-06T08:58:36.281Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "8",
+      "object_repr": "🌐 Networking",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2024-03-06T08:58:52.869Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "🍵 Java",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2024-03-06T08:59:04.072Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "🐍 Python",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2024-03-06T08:59:18.432Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "⚙ Django",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2024-03-06T09:00:22.860Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "8",
+      "object_repr": "Networking",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2024-03-06T09:00:27.237Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "Django",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2024-03-06T09:00:31.314Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "Java",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2024-03-06T09:00:35.388Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Python",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2024-03-07T13:32:46.414Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "bob",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Skill\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2024-03-07T13:33:35.298Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "michael_code",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email address\", \"Skill\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2024-03-07T13:33:52.320Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "pipip",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2024-03-07T13:33:52.341Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "pipipi",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2024-03-07T13:33:52.346Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "pit",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2024-03-07T13:34:02.582Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "michael_code",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Skill\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2024-03-07T13:35:59.342Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "Django",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2024-03-07T13:36:09.013Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "9",
+      "object_repr": "Scrum",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2024-03-07T13:36:23.471Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "10",
+      "object_repr": "Blockchain",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2024-03-07T13:37:24.816Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "michael_code",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Skill\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2024-03-07T13:37:46.968Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "asdf by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2024-03-07T13:37:46.975Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "i'm tired.... by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2024-03-07T13:37:46.981Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "notetoti by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2024-03-07T13:37:46.986Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Java note by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2024-03-07T13:38:52.149Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Networking Protocols 🌎 by dj",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Body\", \"Resources\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2024-03-07T13:39:49.876Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "What is blockchain? by michael_code",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2024-03-07T13:40:27.450Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "Scrum by dj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2024-03-07T13:41:07.958Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "Java 🍵 by bob",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2024-03-07T13:41:51.482Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Python 🐍 by dj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2024-03-07T13:42:24.737Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Consensus Mechanisms in Blockchain by michael_code",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2024-03-07T13:42:57.027Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Java Virtual Machine (JVM) by bob",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2024-03-07T13:43:36.810Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Scrum Events and Artifacts by michael_code",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2024-03-07T13:43:53.571Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "aaaaaaaa!!! by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2024-03-07T13:43:53.576Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Python cheat shit by dj",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2024-03-07T13:44:46.196Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "Scrum cheat sheet 📓 by bob",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2024-03-07T13:45:10.792Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "8",
+      "object_repr": "Everything about blockchain by dj",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2024-03-07T13:46:34.330Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "9",
+      "object_repr": "Java in a nutshell by michael_code",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2024-03-07T14:19:55.623Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "kim",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2024-03-07T14:22:25.181Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "kim",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "46isdwk0zqxgi3owtg6ndv8kdokwn9xa",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnK-htKes5grb1eHEC2FCdVxN2RpRTQvpl5hwi4byXsPa9hIXEVk7j8bhHTK9cB6In10WRqdVuXKIciT9rlvVF-307376BgL6OmaCecySn0mZXRTvvEVjEDOGB2qNmC5xksZw2QVI6RSFvvyRjL4vMF_dA4hw:1riF6j:Mxpu5mpkC9VKv7AMIooA_N77hN3kEbhmrRU_49sjHSw",
+      "expire_date": "2024-03-21T14:52:29.523Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ghwgs9m7g6yr68dujf1uerl7jvgghni8",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnK-htKes5grb1eHEC2FCdVxN2RpRTQvpl5hwi4byXsPa9hIXEVk7j8bhHTK9cB6In10WRqdVuXKIciT9rlvVF-307376BgL6OmaCecySn0mZXRTvvEVjEDOGB2qNmC5xksZw2QVI6RSFvvyRjL4vMF_dA4hw:1riaT1:OdOfLFEhmLLViotCsc-_f4VBAyS9Y-xc_hIZ4fXm3ak",
+      "expire_date": "2024-03-22T13:40:55.228Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "i7h2f46q4aads1a0af4mtwe0yb8btl13",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlnK-htKes5grb1eHEC2FCdVxN2RpRTQvpl5hwi4byXsPa9hIXEVk7j8bhHTK9cB6In10WRqdVuXKIciT9rlvVF-307376BgL6OmaCecySn0mZXRTvvEVjEDOGB2qNmC5xksZw2QVI6RSFvvyRjL4vMF_dA4hw:1riaHV:tTlTREl4yM7iTLrvSveFstDVxrSrcbp-1VhJGW0PbQQ",
+      "expire_date": "2024-03-22T13:29:01.644Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "vbc9a9ts8iusldnz6pq85h9ltc5vggku",
+    "fields": {
+      "session_data": "e30:1rhnYA:T1YS2vY8HvUBD2XwPPaMGwd06ZjXca_gpKNQHWNuiYs",
+      "expire_date": "2024-03-20T09:26:58.082Z"
+    }
+  },
+  {
+    "model": "note.techtag",
+    "pk": 1,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "note.techtag",
+    "pk": 2,
+    "fields": {
+      "name": "Java"
+    }
+  },
+  {
+    "model": "note.techtag",
+    "pk": 8,
+    "fields": {
+      "name": "Networking"
+    }
+  },
+  {
+    "model": "note.techtag",
+    "pk": 9,
+    "fields": {
+      "name": "Scrum"
+    }
+  },
+  {
+    "model": "note.techtag",
+    "pk": 10,
+    "fields": {
+      "name": "Blockchain"
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 1,
+    "fields": {
+      "title": "Networking Protocols 🌎",
+      "body": "Networking protocols define the rules and conventions for communication between devices over a network. Examples include TCP/IP (Transmission Control Protocol/Internet Protocol), HTTP (Hypertext Transfer Protocol), DNS (Domain Name System), and DHCP (Dynamic Host Configuration Protocol).",
+      "resources": null,
+      "owner": 1,
+      "created_at": "2024-03-04T12:26:42.269Z",
+      "tags": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 10,
+    "fields": {
+      "title": "What is blockchain?",
+      "body": "Blockchain is a decentralized and distributed ledger technology that records transactions across multiple computers in a way that is transparent, secure, and It gained popularity with the introduction of Bitcoin, the first cryptocurrency, but has since found applications beyond digital currencies, including supply chain management, healthcare, and voting \r\n\r\nKey features of blockchain include decentralization, transparency, cryptographic security, and immutability.",
+      "resources": null,
+      "owner": 2,
+      "created_at": "2024-03-07T13:39:49.872Z",
+      "tags": [
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 11,
+    "fields": {
+      "title": "Scrum",
+      "body": "Scrum is an agile framework for managing software development projects, emphasizing iterative development, collaboration, and adaptability.\r\n    \r\nIt divides the project into short iterations called sprints, typically lasting 2-4 weeks, during which a potentially shippable product increment is delivered.\r\n    \r\nScrum roles include the Product Owner, Scrum Master, and Development Team, each with specific responsibilities to ensure the success of the project.",
+      "resources": null,
+      "owner": 1,
+      "created_at": "2024-03-07T13:40:27.446Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 12,
+    "fields": {
+      "title": "Java 🍵",
+      "body": "Java is a high-level, object-oriented programming language known for its platform independence, robustness, and versatility.\r\n\r\nIt is widely used for building enterprise-scale applications, web services, mobile apps (Android), and large-scale systems.\r\n    \r\nJava's key features include automatic memory management (garbage collection), strong type system, multi-threading support, and extensive standard library.",
+      "resources": null,
+      "owner": 3,
+      "created_at": "2024-03-07T13:41:07.954Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 13,
+    "fields": {
+      "title": "Python 🐍",
+      "body": "Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility.\r\n\r\nIt is widely used for web development, data analysis, artificial intelligence, scientific computing, and automation.\r\n    \r\nPython's key features include dynamic typing, easy syntax, extensive standard library, and support for multiple programming paradigms (procedural, object-oriented, functional).",
+      "resources": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "owner": 1,
+      "created_at": "2024-03-07T13:41:51.476Z",
+      "tags": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 14,
+    "fields": {
+      "title": "Consensus Mechanisms in Blockchain",
+      "body": "Consensus mechanisms are protocols used in blockchain networks to achieve agreement on the validity of transactions and the state of the ledger among distributed nodes.\r\n    \r\nExamples of consensus mechanisms include Proof of Work (PoW), Proof of Stake (PoS), Delegated Proof of Stake (DPoS), and Practical Byzantine Fault Tolerance (PBFT).",
+      "resources": null,
+      "owner": 2,
+      "created_at": "2024-03-07T13:42:24.733Z",
+      "tags": [
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 15,
+    "fields": {
+      "title": "Java Virtual Machine (JVM)",
+      "body": "JVM is a virtual machine that enables Java bytecode to be executed on different hardware platforms without modification. It provides an environment for running Java applications by converting bytecode into machine code at runtime.\r\n    \r\nJVM manages memory, handles exceptions, and provides security features such as sandboxing to ensure the safe execution of Java programs.",
+      "resources": null,
+      "owner": 3,
+      "created_at": "2024-03-07T13:42:57.023Z",
+      "tags": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "note.note",
+    "pk": 16,
+    "fields": {
+      "title": "Scrum Events and Artifacts",
+      "body": "Scrum defines several events, including Sprint Planning, Daily Standups, Sprint Reviews, and Sprint Retrospectives, to facilitate collaboration, transparency, and alignment within the development team.\r\n    \r\nScrum artifacts include the Product Backlog, Sprint Backlog, Increment, and Burndown Charts, which provide visibility into the work being done and progress towards achieving the Sprint Goal.",
+      "resources": null,
+      "owner": 2,
+      "created_at": "2024-03-07T13:43:36.804Z",
+      "tags": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "note.notegroup",
+    "pk": 7,
+    "fields": {
+      "name": "Scrum cheat sheet 📓",
+      "created_at": "2024-03-07T13:44:46.191Z",
+      "owner": 3,
+      "tag": 9,
+      "notes": [
+        16,
+        11,
+        1
+      ]
+    }
+  },
+  {
+    "model": "note.notegroup",
+    "pk": 8,
+    "fields": {
+      "name": "Everything about blockchain",
+      "created_at": "2024-03-07T13:45:10.786Z",
+      "owner": 1,
+      "tag": 10,
+      "notes": [
+        14,
+        10
+      ]
+    }
+  },
+  {
+    "model": "note.notegroup",
+    "pk": 9,
+    "fields": {
+      "name": "Java in a nutshell",
+      "created_at": "2024-03-07T13:46:34.326Z",
+      "owner": 2,
+      "tag": 2,
+      "notes": [
+        15,
+        12
+      ]
+    }
+  },
+  {
+    "model": "users.techuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$EYNF44QJq3Uukhed4IOOoF$TVnH4dSeGc7bElvSx6mY5EEpNL29b6rtvw4RyoLyK5c=",
+      "last_login": "2024-03-08T13:40:55.187Z",
+      "is_superuser": true,
+      "username": "dj",
+      "first_name": "Sanchez",
+      "last_name": "Chebunix",
+      "email": "cash@money.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-03-04T11:19:39Z",
+      "skill": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.techuser",
+    "pk": 2,
+    "fields": {
+      "password": "michael_code",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "michael_code",
+      "first_name": "michael",
+      "last_name": "dicaprio",
+      "email": "dimich@el.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-03-04T11:22:32Z",
+      "skill": 10,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.techuser",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$ZzdxqlHT2KZVczDw1Q7BUZ$RUIEFjFPwZLqdCXin6YD0l9L5wrqkrkn9gX+gSq7ppo=",
+      "last_login": "2024-03-04T17:05:20Z",
+      "is_superuser": false,
+      "username": "bob",
+      "first_name": "Robert",
+      "last_name": "Hampton",
+      "email": "iambigboss@boss.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-03-04T17:05:19Z",
+      "skill": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
